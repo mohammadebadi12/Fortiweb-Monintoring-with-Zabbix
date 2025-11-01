@@ -1,6 +1,6 @@
 # Fortiweb-Monintoring-with-Zabbix
 
-TO monitor this device
+TO monitor Fortiweb  devices
 
 we can use 	FortiGate by SNMP template for interfaces and device uptime and ...
 but for monitoring Vitual servers and tcp connetion need external python script 
