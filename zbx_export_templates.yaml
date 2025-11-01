@@ -1,0 +1,23 @@
+zabbix_export:
+  version: '7.0'
+  template_groups:
+    - uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    - uuid: d121fb33f4d545baa5b0d95e4e8d563c
+      template: 'Template FortiWeb VS Monitor'
+      name: 'Template FortiWeb VS Monitor'
+      groups:
+        - name: Templates
+      discovery_rules:
+        - uuid: 2dd9967ca223408485e06f6a5dd67eef
+          name: 'Template FortiWeb VS Monitor'
+          type: EXTERNAL
+          key: fortiweb.discovery
+          delay: 1h
+          item_prototypes:
+            - uuid: 6ee574dbf6a741f8a3a35560d750b580
+              name: 'FortiWeb VS Sessions ({#VSNAME})'
+              type: EXTERNAL
+              key: 'fortiweb.session[{#VSNAME}]'
+              units: sessions
