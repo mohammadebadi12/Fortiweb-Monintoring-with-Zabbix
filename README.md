@@ -13,7 +13,7 @@ zabbix proxy or zabbix server depends on your structure
 
 - install SSHPASS 
 - paste your fw password to
-- <pre lang="markdown"> ```bash nano /etc/fortiweb_pass ``` </pre>
+- <pre lang="markdown"> sudo  nano /etc/fortiweb_pass </pre>
 
 
 - create 2 files in this directory
