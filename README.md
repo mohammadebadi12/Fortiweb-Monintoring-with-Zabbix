@@ -19,8 +19,7 @@ zabbix proxy or zabbix server depends on your structure
 
 ``/usr/lib/zabbix/externalscripts/``
 
-``fortiweb.discovery
-fortiweb.session``
+``fortiweb.discovery & fortiweb.session``
 
 thats for creating discovery rule and item prototype
 
