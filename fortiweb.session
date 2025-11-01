@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+import sys
+import subprocess
+import re
+
+# incomming parameters Zabbix
+if len(sys.argv) != 2:
+    print("Usage: fortiweb_session.py <vs_name>")
+    sys.exit(1)
+
+vs_name = sys.argv[1]
+
+#  SSH Confinguration
+FORTIWEB_HOST = "FW -IP "
+FORTIWEB_USER = "ADmin- RO USER"
+PASS_FILE = "/etc/fortiweb_pass"
+
+try:
+    # SSH RUN FortiWeb
+    cmd = f'sshpass -f {PASS_FILE} ssh -o StrictHostKeyChecking=no -T {FORTIWEB_USER}@{FORTIWEB_HOST} "diagnose policy session list {vs_name}"'
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=10)
+
+    output = result.stdout.strip()
+
+# total tcp conncetion export
+
+    match = re.search(r"total\s*=\s*(\d+)", output)
+    if match:
+        print(match.group(1))
+    else:
+        print(0)
+
+except Exception as e:
+    print(0)
