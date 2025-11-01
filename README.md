@@ -23,5 +23,5 @@ zabbix proxy or zabbix server depends on your structure
 
 thats for creating discovery rule and item prototype
 
-- go to zabbix ui and import my template test in zabbix 7 lts
-
+- go to zabbix ui and import template test in zabbix 7 lts
+- link this template to host 
