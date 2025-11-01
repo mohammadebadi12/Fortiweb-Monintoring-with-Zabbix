@@ -13,13 +13,13 @@ zabbix proxy or zabbix server depends on your structure
 
 - install SSHPASS 
 - paste your fw password to
-``/etc/fortiweb_pass``
+```/etc/fortiweb_pass```
 
 - create 2 files in this directory
 
-``/usr/lib/zabbix/externalscripts/``
+```/usr/lib/zabbix/externalscripts/```
 
-``fortiweb.discovery & fortiweb.session``
+```fortiweb.discovery & fortiweb.session```
 
 thats for creating discovery rule and item prototype
 
