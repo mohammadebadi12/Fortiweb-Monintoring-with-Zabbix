@@ -11,7 +11,11 @@ all we need is
 
 zabbix proxy or zabbix server depends on your structure
 
-create 2 files in this directory
+-install SSHPASS 
+-paste your fw password to
+``/etc/fortiweb_pass``
+
+-create 2 files in this directory
 
 ``/usr/lib/zabbix/externalscripts/``
 
@@ -19,4 +23,6 @@ create 2 files in this directory
 fortiweb.session``
 
 thats for creating discovery rule and item prototype
+
+- go to zabbix ui and import my template 
 
