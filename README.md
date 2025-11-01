@@ -11,7 +11,9 @@ all we need is
 
 zabbix proxy or zabbix server depends on your structure
 
-- install SSHPASS 
+- install SSHPASS
+<pre lang="markdown"> sudo  apt update && apt upgrade -y  </pre>
+<pre lang="markdown"> sudo  apt install sshpass  </pre>
 - paste your fw password to
 <pre lang="markdown"> sudo  nano /etc/fortiweb_pass </pre>
 
